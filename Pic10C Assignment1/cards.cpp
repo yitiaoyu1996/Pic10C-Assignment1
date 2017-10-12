@@ -160,8 +160,8 @@ bool Card::operator < (Card card2) const {
 }
 
 void Card::print() const {
-	string eng_rank = get_english_rank();
-	string eng_suit = get_english_suit();
+	std::string eng_rank = get_english_rank();
+	std::string eng_suit = get_english_suit();
 	std::cout << rank << "of" << suit << "               (" << get_english_rank() << " of " << get_english_suit() << ")" << std::endl;
 }
 
@@ -171,7 +171,22 @@ void Card::print() const {
 Hand class
 ************************************************* */
 // Implemente the member functions of the Hand class here.
+Hand::Hand()
+{
+	//it is a vector of Cards, initialize private vector cards
 
+	
+}
+
+void Hand:: print()
+{
+	for (int i = 0; i < cards.size(); i++)
+	{
+		cards[i].print();
+		std::cout << std::endl;
+      //prints out every Card object in the vector cards
+	}
+}
 
 
 /* *************************************************
