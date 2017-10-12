@@ -142,9 +142,7 @@ string Card::get_english_rank() const {
 	else if (rank == "Caballo")
 		return "Knight";
 	else if (rank == "Rey")
-		return "King";
-
-	
+		return "King";	
 }
 
 

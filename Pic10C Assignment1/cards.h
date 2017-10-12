@@ -66,6 +66,8 @@ public:
 	// You decide what functions you'll need...
 	int sum();
 	// to calculate the sum of all the cards in the hand
+	void print();
+	//to print out all the cards in hand
 private:
 	// You decide what fields you'll need...
 };
