@@ -58,7 +58,7 @@ private:
 };
 
 
-class Hand {
+class Hand : public Card {
 public:
 	// A vector of Cards
 	Hand();
