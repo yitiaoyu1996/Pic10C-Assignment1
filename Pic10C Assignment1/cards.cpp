@@ -178,6 +178,7 @@ Hand::Hand()
 	
 }
 
+//no need to use inheritance
 void Hand:: print()
 {
 	for (int i = 0; i < cards.size(); i++)
