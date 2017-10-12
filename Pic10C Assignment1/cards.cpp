@@ -117,7 +117,7 @@ string Card::get_english_suit() const {
 	else if (suit == "bastos")
 		return "clubs";
 	else if (suit == "oros")
-		return "diamonds";
+		return "coins";
 }
 
 // Accessor: returns a string with the rank of the card in English 
@@ -157,6 +157,12 @@ int Card::get_rank() const {
 // Returns TRUE if card1 < card2
 bool Card::operator < (Card card2) const {
 	return rank < card2.rank;
+}
+
+void Card::print() const {
+	string eng_rank = get_english_rank();
+	string eng_suit = get_english_suit();
+	std::cout << rank << "of" << suit << "               (" << get_english_rank() << " of " << get_english_suit() << ")" << std::endl;
 }
 
 
