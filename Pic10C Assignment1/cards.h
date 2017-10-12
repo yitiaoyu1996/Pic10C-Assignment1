@@ -52,6 +52,8 @@ public:
 	// Useful if you want to sort the cards.
 	bool operator < (Card card2) const;
 
+	//declare a virtual print function in Class Card
+	virtual void print();
 private:
 	suit_t suit;
 	rank_t rank;
