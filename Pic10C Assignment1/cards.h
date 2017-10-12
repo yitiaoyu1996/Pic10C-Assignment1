@@ -64,7 +64,8 @@ public:
 	Hand();
 
 	// You decide what functions you'll need...
-
+	int sum();
+	// to calculate the sum of all the cards in the hand
 private:
 	// You decide what fields you'll need...
 };
