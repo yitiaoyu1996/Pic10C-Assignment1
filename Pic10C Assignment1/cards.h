@@ -82,6 +82,16 @@ public:
 	//    Assigns initial amount of money
 	Player(int m);
 
+	//add money to the player
+	void add(int m);
+
+	void minus(int m);
+	//decrease money 
+
+	int get_money();
+	//get the amount of money that the player has
+
+
 	// You decide what functions you'll need...
 
 private:
