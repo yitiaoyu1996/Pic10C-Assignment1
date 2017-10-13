@@ -18,7 +18,17 @@ using namespace std;
 
 // Stub for main
 int main() {
-	//You have $100.Enter bet : 99
+	Player one(100);
+	Hand cards1();
+	Card first();
+	Card second();
+
+	cards1.push_back(first);
+
+
+
+
+	/*You have $100.Enter bet : 99
 		Your cards :
 	Dos de copas(Two of cups).
 		Your total is 2. Do you want another card(y / n) ? n
@@ -237,6 +247,6 @@ int main() {
 		Come back when you have more money.
 
 		Bye!
-		//
+		*/
 	return 0;
 }

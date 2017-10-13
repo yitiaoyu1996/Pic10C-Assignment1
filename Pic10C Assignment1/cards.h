@@ -1,8 +1,4 @@
-/* *************************************
-Ricardo Salazar, February 26, 2015
 
-Interface of a simple Card class
-************************************* */
 
 #include <string>
 #include <vector>
@@ -70,6 +66,9 @@ public:
 	// to calculate the sum of all the cards in the hand
 	void print();
 	//to print out all the cards in hand
+	void push_back(Card x );
+	//pushback Card objects to the private cards vector
+
 private:
 	std::vector<Card>cards;
 	// You decide what fields you'll need...
