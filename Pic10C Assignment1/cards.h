@@ -60,7 +60,7 @@ private:
 };
 
 
-class Hand : public Card {
+class Hand {
 public:
 	// A vector of Cards
 	Hand();
@@ -71,6 +71,7 @@ public:
 	void print();
 	//to print out all the cards in hand
 private:
+	std::vector<Card>cards;
 	// You decide what fields you'll need...
 };
 
