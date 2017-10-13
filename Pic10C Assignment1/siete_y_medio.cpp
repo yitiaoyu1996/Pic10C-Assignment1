@@ -24,6 +24,13 @@ int main() {
 	Card second();
 
 	cards1.push_back(first);
+	std::cout << "You have $100.Enter bet : ";
+	int bet;
+	std::cin >> bet;
+	std::cout << "Your Cards: " << std::endl;
+	cards1.print();
+	std::cout << "Your total is " << cards1.sum();
+
 
 
 
