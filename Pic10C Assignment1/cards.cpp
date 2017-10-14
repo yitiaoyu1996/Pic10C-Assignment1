@@ -164,7 +164,29 @@ void Card::print() const {
 	std::string eng_suit = get_english_suit();
 	std::cout << rank << "of" << suit << "               (" << get_english_rank() << " of " << get_english_suit() << ")" << std::endl;
 }
-
+double Card::get_value() const
+{
+	if (rank == "As")
+		return 1;
+	else if (rank == "Dos")
+		return 2;
+	else if (rank == "Tres")
+		return 3;
+	else if (rank == "Cuatro")
+		return 4;
+	else if (rank == "Cinco")
+		return 5;
+	else if (rank == "Seis")
+		return 6;
+	else if (rank == "Siete")
+		return 7;
+	else if (rank == "Sota")
+		return 1 / 2;
+	else if (rank == "Caballo")
+		return 1 / 2;
+	else if (rank == "Rey")
+		return 1 / 2;
+ }
 
 
 /* *************************************************
@@ -188,9 +210,44 @@ void Hand:: print()
       //prints out every Card object in the vector cards
 	}
 }
+double Hand::sum() {
+	double sum = 0;
+	for (int i = 0; i < cards.size(); i++)
+	{
+		sum += cards[i].get_value();
 
+	}
+	return sum;
+
+}
+
+
+//to push card x into the private vector
+void Hand::push_back(Card x)
+{
+	cards.push_back(x);
+}
 
 /* *************************************************
 Player class
 ************************************************* */
 // Implemente the member functions of the Player class here.
+Player::Player(int m)
+{
+	money = m;
+}
+
+void Player ::add (int m)
+{
+	money += m;
+}
+
+void Player::minus(int m)
+{
+	money -= m;
+}
+
+int Player::get_money()
+{
+	return money;
+}

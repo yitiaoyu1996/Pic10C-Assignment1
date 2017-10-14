@@ -41,8 +41,11 @@ public:
 
 	// Converts card rank to number.
 	// The possible returns are: 1, 2, 3, 4, 5, 6, 7, 10, 11 and 12
+	
 	int get_rank() const;
-
+    
+	//return the value of the card
+	double get_value() const;
 	// Compare rank of two cards. E.g: Eight<Jack is true.
 	// Assume Ace is always 1. 
 	// Useful if you want to sort the cards.
@@ -62,11 +65,11 @@ public:
 	Hand();
 
 	// You decide what functions you'll need...
-	int sum();
+	double sum();
 	// to calculate the sum of all the cards in the hand
 	void print();
 	//to print out all the cards in hand
-	void push_back(Card x );
+	void push_back(Card x);
 	//pushback Card objects to the private cards vector
 
 private:
