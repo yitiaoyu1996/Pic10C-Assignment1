@@ -18,9 +18,14 @@ using namespace std;
 
 // Stub for main
 int main() {
+	Player one(100);
+	Hand cards1();
+	Card first();
+	Card second();
+
+	cards1.push_back(first);
+
 	
-
-
 
 
 	return 0;

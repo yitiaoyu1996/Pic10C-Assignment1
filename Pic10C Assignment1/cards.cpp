@@ -8,7 +8,7 @@ You might or might not need these two extra libraries
 #include <algorithm>
 */
 
-
+//
 /* *************************************************
 Card class
 ************************************************* */
@@ -227,6 +227,8 @@ void Hand::push_back(Card x)
 {
 	cards.push_back(x);
 }
+
+
 
 /* *************************************************
 Player class
