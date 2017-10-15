@@ -52,7 +52,7 @@ public:
 	bool operator < (Card card2) const;
 
 	//declare a virtual print function in Class Card
-	virtual void print();
+	virtual void print() const;
 private:
 	suit_t suit;
 	rank_t rank;

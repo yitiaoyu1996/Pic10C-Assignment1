@@ -2,11 +2,10 @@
 #include <cstdlib>
 #include <iostream>
 
-/*
-You might or might not need these two extra libraries
+
 #include <iomanip>
 #include <algorithm>
-*/
+
 
 //
 /* *************************************************
@@ -110,38 +109,38 @@ string Card::get_spanish_rank() const {
 // Accessor: returns a string with the suit of the card in English 
 // This is just a stub! Modify it to your liking.
 string Card::get_english_suit() const {
-	if (suit == "espadas")
+	if (suit == ESPADAS)
 		return "spades";
-	else if (suit == "copas")
+	else if (suit == COPAS)
 		return "cups";
-	else if (suit == "bastos")
+	else if (suit == BASTOS)
 		return "clubs";
-	else if (suit == "oros")
+	else if (suit == OROS)
 		return "coins";
 }
 
 // Accessor: returns a string with the rank of the card in English 
 // This is just a stub! Modify it to your liking.
 string Card::get_english_rank() const {
-	if (rank == "As")
+	if (rank == AS)
 		return "Ace";
-	else if (rank == "Dos")
+	else if (rank == DOS)
 		return "Two";
-	else if (rank == "Tres")
+	else if (rank == TRES)
 		return "Three";
-	else if (rank == "Cuatro")
+	else if (rank == CUATRO)
 		return "Four";
-	else if (rank == "Cinco")
+	else if (rank == CINCO)
 		return "Five";
-	else if (rank == "Seis")
+	else if (rank == SEIS)
 		return "Six";
-	else if (rank == "Siete")
+	else if (rank == SIETE)
 		return "Seven";
-	else if (rank == "Sota")
+	else if (rank == SOTA)
 		return "Jack";
-	else if (rank == "Caballo")
+	else if (rank == CABALLO)
 		return "Knight";
-	else if (rank == "Rey")
+	else if (rank == REY)
 		return "King";	
 }
 
@@ -166,25 +165,25 @@ void Card::print() const {
 }
 double Card::get_value() const
 {
-	if (rank == "As")
+	if (rank == AS)
 		return 1;
-	else if (rank == "Dos")
+	else if (rank == DOS)
 		return 2;
-	else if (rank == "Tres")
+	else if (rank == TRES)
 		return 3;
-	else if (rank == "Cuatro")
+	else if (rank == CUATRO)
 		return 4;
-	else if (rank == "Cinco")
+	else if (rank == CINCO)
 		return 5;
-	else if (rank == "Seis")
+	else if (rank == SEIS)
 		return 6;
-	else if (rank == "Siete")
+	else if (rank == SIETE)
 		return 7;
-	else if (rank == "Sota")
+	else if (rank == SOTA)
 		return 1 / 2;
-	else if (rank == "Caballo")
+	else if (rank == CABALLO)
 		return 1 / 2;
-	else if (rank == "Rey")
+	else if (rank == REY)
 		return 1 / 2;
  }
 
