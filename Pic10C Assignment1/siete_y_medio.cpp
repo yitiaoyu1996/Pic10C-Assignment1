@@ -19,20 +19,29 @@ using namespace std;
 // Stub for main
 int main() {
 	Player one(100);
-	Hand cards1();
-	Card first();
-	Card second();
+	Hand h1();
 
-	cards1.push_back(first);
 	std::cout << "You have $100.Enter bet : ";
 	int bet;
 	std::cin >> bet;
-	std::cout << "Your Cards: " << std::endl;
-	cards1.print();
-	std::cout << "Your total is " << cards1.sum();
+	string answer;
+	do 
+	{
+		Card p1();
+		h1.push_back(p1);
+	    std::cout << "Your Cards : " << std::endl;
+	    h1.print();
+	    std::cout << "Your total is " << cards1.sum() << ".";
+	    std::cout << "Do you want another card (y/n)? ";    
+	    cin >> answer;
+	} while (answer == "y"||answer=="Y");
+	Player dealer(100);
+	Card d1;
+	Hand d;
+	d.push_back(d1);
+	std::cout << "Dealer's cards: " << d1.print();
 
-
-
+	
 
 
 	/*You have $100.Enter bet : 99
