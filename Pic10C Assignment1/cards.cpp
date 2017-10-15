@@ -161,7 +161,9 @@ bool Card::operator < (Card card2) const {
 void Card::print() const {
 	std::string eng_rank = get_english_rank();
 	std::string eng_suit = get_english_suit();
-	std::cout << rank << " de " << suit << "               (" << get_english_rank() << " of " << get_english_suit() << ")" << std::endl;
+	std::string span_suit = get_spanish_suit();
+	std::string span_rank = get_spanish_rank();
+	std::cout << span_rank << " de " << span_suit << std::setw(10)<<"(" << get_english_rank() << " of " << get_english_suit() << ")" << std::endl;
 }
 double Card::get_value() const
 {
@@ -180,11 +182,11 @@ double Card::get_value() const
 	else if (rank == SIETE)
 		return 7;
 	else if (rank == SOTA)
-		return 1 / 2;
+		return 0.5;
 	else if (rank == CABALLO)
-		return 1 / 2;
+		return 0.5;
 	else if (rank == REY)
-		return 1 / 2;
+		return 0.5;
  }
 
 
@@ -203,7 +205,8 @@ Hand::Hand()
 void Hand:: print()
 {
 	for (int i = 0; i < cards.size(); i++)
-	{
+	{   
+		std::cout << std::setw(10);
 		cards[i].print();
 		std::cout << std::endl;
       //prints out every Card object in the vector cards

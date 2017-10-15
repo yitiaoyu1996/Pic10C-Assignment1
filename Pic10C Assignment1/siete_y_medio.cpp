@@ -20,22 +20,29 @@ using namespace std;
 int main() {
 
 	Player one(100);
-	Hand p;
-
+	
+	
 	while(one.get_money()>0)
 	{ 
-	std::cout << "You have $100.Enter bet : ";
+		Hand p;
+		int p_money = one.get_money();
+		std::cout << "You have: $" << p_money<<". Enter bet: ";
 	int bet;
 	std::cin >> bet;
 	string answer;
-	do 
+	do
 	{
 		Card p1;
 		p.push_back(p1);
-	    std::cout << "Your Cards : " << std::endl;
-	    p.print();
-	    std::cout << "Your total is " << p.sum() << ".";
-	    std::cout << "Do you want another card (y/n)? ";    
+		std::cout << "Your Cards : " << std::endl;
+		p.print();
+		std::cout << "Your total is " << p.sum() << ".";
+		if (p.sum()>7.5)
+		{
+			std::cout << "You bust" << std::endl;
+			break;
+		}
+		std::cout << "Do you want another card (y/n)? ";    
 	    cin >> answer;
 	} while (answer == "y"||answer=="Y");
 	Player dealer(100);
@@ -44,14 +51,14 @@ int main() {
 	
 		Card d1;
 		d.push_back(d1);
-		std::cout << "Dealer's cards: ";
+		std::cout << "Dealer's cards: " << std::endl;
 		d.print();
 		std::cout << "\n";
 		std::cout << "The dealer's total is " << d.sum() << ".";
 		bool more = true;
-		while (more==true && d.sum() <= 7.5)
+		while (more == true && d.sum() <= 7.5)
 		{
-			if (d.sum() > 5.5)
+			if (d.sum() >= 5.5)
 			{
 				more = false;
 			}
@@ -63,9 +70,10 @@ int main() {
 				d2.print();
 				std::cout << "Dealer's cards:" << std::endl;
 				d.print();
-				cout << "The dealer's total is " << d.sum();
+				cout << "The dealer's total is " << d.sum()<<". ";
 
 			}
+		}
 
 			double difference_d = 7.5 - d.sum();
 			double difference_p = 7.5 - p.sum();
@@ -92,21 +100,21 @@ int main() {
 
 			else if (d.sum() > 7.5 && p.sum() < 7.5)
 			{
-				std::cout << "You win!" << std::endl;
+				std::cout << " You win!" << std::endl;
 				one.add(bet);
 
 			}
 			else if (d.sum() < 7.5 && p.sum() > 7.5)
 			{
-				std::cout << "You bust!" << std::endl;
+				std::cout << " You bust!" << std::endl;
 				one.minus(bet);
 			}
 
-		}
+		
 	}
 	
 
-
+	std::cout << "You have no money. Game over." << std::endl;
 	
 
 
