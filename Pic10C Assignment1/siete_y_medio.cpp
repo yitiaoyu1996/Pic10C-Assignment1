@@ -49,7 +49,7 @@ int main() {
 		std::cout << "\n";
 		std::cout << "The dealer's total is " << d.sum() << ".";
 		bool more = true;
-		while (more&&d.sum <= 7.5)
+		while (more==true && d.sum() <= 7.5)
 		{
 			if (d.sum() > 5.5)
 			{
@@ -90,13 +90,13 @@ int main() {
 					std::cout << "Nobody wins!" << std::endl;
 			}
 
-			else if (d.sum() > 7.5 && p.sum < 7.5)
+			else if (d.sum() > 7.5 && p.sum() < 7.5)
 			{
 				std::cout << "You win!" << std::endl;
 				one.add(bet);
 
 			}
-			else if (d.sum() < 7.5 && p.sum > 7.5)
+			else if (d.sum() < 7.5 && p.sum() > 7.5)
 			{
 				std::cout << "You bust!" << std::endl;
 				one.minus(bet);
