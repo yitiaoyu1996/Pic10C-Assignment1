@@ -162,7 +162,7 @@ bool Card::operator < (Card card2) const {
 void Card::print() const {
 	std::string eng_rank = get_english_rank();
 	std::string eng_suit = get_english_suit();
-	std::cout << rank << "of" << suit << "               (" << get_english_rank() << " of " << get_english_suit() << ")" << std::endl;
+	std::cout << rank << " de " << suit << "               (" << get_english_rank() << " of " << get_english_suit() << ")" << std::endl;
 }
 double Card::get_value() const
 {
